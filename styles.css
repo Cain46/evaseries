@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    \* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px; /* Espacio entre el menú y el carrusel */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px; /* Espacio entre el texto y el sombreado */
+    box-shadow: -5px 0px 5px rgba(128, 128, 128, 0.5); /* Sombreado gris en los lados izquierdos e inferiores */
+    transition: box-shadow 0.3s ease; /* Transición suave del sombreado al pasar el cursor */
+}
+
+nav a:hover {
+    box-shadow: 5px 0px 5px rgba(128, 128, 128, 0.5); /* Cambio de sombreado al pasar el cursor */
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 20px; /* Espacio entre el menú y el carrusel */
+}
+
+.carousel img {
+    max-width: 75%;
+    max-height: 75%;
+    margin: 0%; /* Espacio de 2 píxeles entre las imágenes */
+}
