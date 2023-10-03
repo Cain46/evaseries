@@ -1,27 +1,52 @@
+/* Esto es el selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Esta propiedad se usa por un tema de los espacios del contenido, cuando nos veamos si queres te cuento que es, pero es muy util y se suele ponerla acá, en el selector universal*/
+}
+
 body {
     background-color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    /* Margin y padding = 0 se suele poner en el selector universal, que te escribo arriba, así que te los comento acá abajo, como para que los borres: */
+    /* margin: 0;
+    padding: 0; */
+    /* No pongas display flex en el body; siempre hacelo por bloques mas chicos, porque es más práctico y de esta manera te vas a volver loco para querer acomodar mejor el resto del código */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* Este es otro comentario de flex en el body.. yo no lo usaría, pero como querés lograr algo súper particular, podes usar flexbox o grid para lograr ese espacio en todo el contenido... y si, ponelo acá en el body */
+    max-width: 100%;
     height: 100vh;
 }
 
 header {
     background-color: white;
-    \* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
-    padding: 5px;
-    width: 100%;
+    /* Fijate que pusiste * / y no te toma el comentario, te lo marca como error  */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);*/
+    padding: 1rem;
+    max-width: 80%;
     text-align: center;
 }
 
+
 nav {
+    height: 10vh;
+    margin-top: 3rem;
+}
+
+/* Agregale por favor una ul despues del nav, porque como ahora forma parte de una lista desordenada, necesitas afectar a ese elemento (a la lista y no a la nav */
+nav ul {
     display: flex;
     justify-content: center;
-    margin-top: 5px; /* Espacio entre el menú y el carrusel */
+    /* Espacio entre el menú y el carrusel */
+}
+
+nav ul li {
+    /* Esto es para sacarle los puntos a la lista */
+    list-style: none;
 }
 
 nav a {
@@ -29,25 +54,40 @@ nav a {
     color: #333;
     font-weight: bold;
     margin: 0 10px;
-    padding: 5px; /* Espacio entre el texto y el sombreado */
-    box-shadow: -5px 0px 5px rgba(128, 128, 128, 0.5); /* Sombreado gris en los lados izquierdos e inferiores */
-    transition: box-shadow 0.3s ease; /* Transición suave del sombreado al pasar el cursor */
+    padding: 5px;
+    /* Espacio entre el texto y el sombreado */
+    box-shadow: -5px 0px 5px rgba(128, 128, 128, 0.5);
+    /* Sombreado gris en los lados izquierdos e inferiores */
+    transition: box-shadow 0.3s ease;
+    /* Transición suave del sombreado al pasar el cursor */
 }
 
 nav a:hover {
-    box-shadow: 5px 0px 5px rgba(128, 128, 128, 0.5); /* Cambio de sombreado al pasar el cursor */
+    box-shadow: 5px 0px 5px rgba(128, 128, 128, 0.5);
+    /* Cambio de sombreado al pasar el cursor */
 }
 
 .carousel {
+    max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
-    margin-top: 20px; /* Espacio entre el menú y el carrusel */
+    margin-top: 20px;
+    /* Espacio entre el menú y el carrusel */
 }
 
-.carousel img {
+.carousel a img {
     max-width: 75%;
+    /* Si le pones el width, no le pondría el height */
     max-height: 75%;
-    margin: 0%; /* Espacio de 2 píxeles entre las imágenes */
+    /* Borraría el margen este, o avisame que querés hacer */
+    margin: 0%;
+    /* Espacio de 2 píxeles entre las imágenes */
+}
+
+.contenedor-texto {
+    width: 80%;
+    padding: 1rem 3rem;
+    text-align: justify;
 }
